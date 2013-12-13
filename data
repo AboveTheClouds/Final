@@ -1,0 +1,54 @@
+
+public class Data extends Car {
+	   private double miles;
+	   private double gallons;
+	   private double mileage;
+	   
+	   public Data(String n, String ma, String mo, int year,
+			   		double mi, double ga, double odo)
+	   {
+	      super(n, ma, mo, year);
+	      miles = mi;
+	      gallons = ga;
+	      mileage = odo;
+	   }
+	   public Data(String n, String ma, String mo, int year)
+	   {
+	      super(n,ma,mo,year);
+	   }
+	   public void setMiles(double mi)
+	   {
+	      miles = mi;
+	   }
+	   public void setGallons(double ga)
+	   {
+	      gallons = ga;
+	   }
+	   public void setMileage(double odo)
+	   {
+	      mileage = odo;
+	   }
+	   public double getMpg()
+	   {
+	      double mpg;      
+	      mpg = miles / gallons;
+	      return mpg;
+	   }
+	   public double getAverageMiles()
+	   {
+	      double yearlymiles;
+  
+	      yearlymiles = mileage / (2013 - yearBuilt);
+	      
+	      return yearlymiles;
+	   }
+	   public String toString()
+	   {
+	      String str;
+	      str = super.toString() + "\nNumber of Miles driven since last fill up: " + miles +
+	            "\nNumber of Gallons filled up: " + gallons + "\nCurrent Odometer reads: " 
+	    		  + mileage;
+	      
+	      return str;         
+	   }
+}	   	

@@ -1,0 +1,20 @@
+
+public abstract class Car{
+	   private String name, make, model;
+	   public int yearBuilt;
+	   
+	   public Car(String n, String ma, String mo, int year)
+	   {
+	      name = n;
+	      make = ma;
+	      model = mo;
+	      yearBuilt = year;
+	   }
+	   public String toString()
+	   {
+	      String str;
+	      str = "\nCar Owner Information: " + "\nName: " + name + "\nCar Make: " + make +
+	    		  "\nCar Model: " + model + "\nYear: " + yearBuilt;
+	      return str;
+	   }
+}

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Demo {
+	 public static void main(String[] args)
+     {
+        Scanner input = new Scanner(System.in);
+  		int year;
+       double miles, gallons, mileage;
+  		String name,make, model;
+  		
+  		System.out.print("Please enter your name: ");
+  		name = input.next();
+  		
+  		System.out.print("Please enter your car make: ");
+  		make = input.next();
+  		
+  		System.out.print("Please enter your car model: ");
+  		model = input.next();
+  		
+  		System.out.print("Please enter the year your car was made: ");
+  		year = input.nextInt();
+  		
+  		System.out.print("Please enter the number of miles driven since last FULL fill up: ");
+  		miles = input.nextDouble();
+  		
+  		System.out.print("Please enter the amount of gallons you filled to FULL: ");
+  		gallons = input.nextDouble();
+  		
+  		System.out.print("Please enter the current mileage of your car: ");
+  		mileage = input.nextDouble();
+  		
+  		Data Car1 = new Data(name, make, model, year, miles, gallons, mileage);
+  		    
+       System.out.println(Car1);
+  		System.out.println("\nCar Data Summary:" + "\nMiles Per Gallon: " + Car1.getMpg() +
+  							"\nAverage Yearly Mileage: " + Car1.getAverageMiles());
+     }
+  }
